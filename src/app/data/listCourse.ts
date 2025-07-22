@@ -1,3 +1,5 @@
+// Untuk Card Di Homepage atau beranda  kurus maping dari data dummy ini ya,  tambahin aja datanya sebanyak bamnyaknya biar estetik wkwk
+
 export const listCourse = [
   {
     id: 1,
@@ -11,6 +13,14 @@ export const listCourse = [
       "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
   },
 ];
+
+
+
+
+
+
+
+
 
 export const detailCourse = {
   id: 1,
