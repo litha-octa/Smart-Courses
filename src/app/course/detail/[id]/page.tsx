@@ -12,7 +12,7 @@ import {
   Star,
   Archive,
 } from "lucide-react";
-
+import { Description, Curriculum, Mentor, Review } from "@/components/ui";
 const DetailCourse = () => {
   const [play, setPlay] = useState(false);
   const [active, setActive] = useState(0);
@@ -67,16 +67,18 @@ const DetailCourse = () => {
               {menuDetail.map((item: string, i: number) => {
                 return (
                   <button
-                  onClick={() => setActive(i)}
-                   key={i} className={`w-[120px] hover:opacity-85 cursor-pointer h-[50px] ${i == active ? "bg-gradient-to-tr from-[#026690] to-[#0C9EF0] text-white ":" bg-transparent text-[#026690]"
-                  } rounded-[5px]  font-bold flex justify-center items-center`}>
+                    onClick={() => setActive(i)}
+                    key={i} className={`w-[120px] hover:opacity-85 cursor-pointer h-[50px] ${i == active ? "bg-gradient-to-tr from-[#026690] to-[#0C9EF0] text-white " : " bg-transparent text-[#026690]"
+                      } rounded-[5px]  font-bold flex justify-center items-center`}>
                     <p>{item}</p>
                   </button>
                 );
               })}
-
-             
             </div>
+            {active == 0 ?
+              <Description /> : active == 1 ? <Curriculum /> : active == 2 ? <Mentor /> : <Review />
+            }
+
           </div>
 
           <div className="w-[400px] h-[500px] rounded-[10px] bg-white p-5">
@@ -125,6 +127,7 @@ const DetailCourse = () => {
                   <span>{detailCourse.category}</span>
                 </div>
               </div>
+              <p>problem</p>
             </div>
 
             <button
