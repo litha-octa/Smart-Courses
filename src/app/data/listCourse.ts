@@ -12,6 +12,17 @@ export const listCourse = [
     videolink:
       "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
   },
+  {
+    id: 1,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
 ];
 
 

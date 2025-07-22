@@ -77,8 +77,19 @@ const DetailCourse = () => {
 
              
             </div>
+            {/* Ini Detail */}
+            {/* <p>p halooo ini tes matuy</p>
+            <p>p halooo ini tes matuy</p>
+          <p>p halooo ini tes matuy</p> */}
+
+
+          {/*  Ini KuriKUlum */}
+          
           </div>
 
+
+
+{/* Ini Kurikulum */}
           <div className="w-[400px] h-[500px] rounded-[10px] bg-white p-5">
             <div className="grid grid-cols-3 gap-3 mt-10 w-full">
               <div className="col-span-1 flex flex-col text-[#026690] h-[60px] items-center justify-center">
