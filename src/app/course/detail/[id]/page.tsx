@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import React, { useState } from "react";
-import { detailCourse, menuDetail } from "@/app/data/listCourse";
+import React, { useEffect, useState } from "react";
+import { menuDetail } from "@/app/data/listCourse";
 import BgDetail from "@/assets/bg-detail.svg";
-import { Volume2 } from "lucide-react";
+
 import {
   Tally4,
   ShieldCheck,
@@ -17,6 +18,12 @@ import { Description, Curriculum, Mentor, Review } from "@/components/ui";
 const DetailCourse = () => {
   const [play, setPlay] = useState(false);
   const [active, setActive] = useState(0);
+  const [detailCourse, setDetailCourse] = useState<any>({});
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("detail") || "");
+    setDetailCourse(data);
+  }, []);
+
   return (
     <div className="relative ">
       <div className="min-h-[500px] relative w-full bg-gradient-to-b from-teal-500 to-teal-300">
@@ -30,7 +37,9 @@ const DetailCourse = () => {
           <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-white">
             {detailCourse.title}
           </p>
-          <p className="text-[16px] text-center text-white">{detailCourse.subtitle}</p>
+          <p className="text-[16px] text-center text-white">
+            {detailCourse.subtitle}
+          </p>
           <p className="text-[16px] text-white">Oleh {detailCourse.author}</p>
         </div>
 
@@ -83,9 +92,9 @@ const DetailCourse = () => {
             </div>
             <div className="lg:w-[700px] md:w-[700px] w-[80%] my-5 bg-white shadow rounded-[10px]">
               {active == 0 ? (
-                <Description />
+                <Description data={detailCourse} />
               ) : active == 1 ? (
-                <Curriculum />
+                <Curriculum data={detailCourse} />
               ) : active == 2 ? (
                 <Mentor image={detailCourse.authorImage} />
               ) : (
@@ -126,16 +135,16 @@ const DetailCourse = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 text-teal-500  justify-center px-5 items-center gap-10 my-10 text-[13px]">
+            <div className="flex justify-center items-center text-teal-500 px-5 gap-10 my-10 text-[13px]">
               <div className="col-span-1">
-                <p className="text-[16px] font-bold">Rating</p>
+                <p className="text-[14px] font-bold my-1 text-center">Rating</p>
                 <div className="flex justify-start items-center gap-2">
                   <Star className="text-yellow-500" size={20} />{" "}
                   <span>{detailCourse.rating}</span>
                 </div>
               </div>
               <div className="col-span-1">
-                <p className="text-[16px] font-bold">Kategory</p>
+                <p className="text-[14px] font-bold my-1 text-center">Kategory</p>
                 <div className="flex justify-start items-center gap-2">
                   <Archive className="text-teal-500" size={20} />{" "}
                   <span>{detailCourse.category}</span>
