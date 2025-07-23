@@ -15,7 +15,6 @@ const [isSuccess, setIsSuccess] = useState(false);
 
   return (
     <>
-        <Navbar />
         {isSuccess && (
         <Alert className="fixed top-4 right-4 w-96">
         <CheckCircle2Icon color="#2fd1c8"/>
