@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { useRouter } from "next/navigation";
 interface MentorProps {
   image: string;
 }
