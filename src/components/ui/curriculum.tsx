@@ -26,7 +26,7 @@ const modules: Module[] = [
 ];
 const Curriculum = () => {
   return (
-    <div className="max-w-3xl mx-auto py-10 px-4">
+    <div className="text-[13px] mx-auto py-10 px-4">
       {modules.map((module, index) => (
         <div
           key={index}

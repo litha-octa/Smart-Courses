@@ -9,7 +9,7 @@ const SmartCourseLayout = ({ children }: LayoutProps) => {
   return (
     <div>
       <Navbar />
-      <div className="bg-gray-100">{children}</div>
+      <div className="bg-[#F8F7F3]">{children}</div>
     </div>
   );
 };

@@ -1,13 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import { useRouter } from "next/navigation";
+interface MentorProps {
+  image: string;
+}
 
-const Mentor = () => {
+const Mentor = ({ image}: MentorProps) => {
+
+
   
 return (
-    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6 flex flex-col md:flex-row items-start gap-6">
+    <div className="max-w-3xl mx-auto bg-white text-[13px] shadow-md rounded-lg p-6 flex flex-col md:flex-row items-start gap-6">
       {/* Foto Profil */}
       <img
-        src="https://via.placeholder.com/120" // Ganti dengan URL gambar asli
+        src={image} 
         alt="Ahmad Rosid Komarudin"
         className="w-28 h-28 rounded-full object-cover"
       />

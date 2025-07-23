@@ -34,8 +34,8 @@ const Description = () => {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-6 text-slate-800">
-      <h2 className="text-xl font-semibold mb-4">Tentang Kursus</h2>
+    <div className="w-full  mx-auto px-4 text-[13px]  py-6 text-slate-800">
+      <h2 className="text-[15px] font-bold mb-4">Tentang Kursus</h2>
 
       <p className="mb-4">
         Debian dan Ubuntu merupakan salah distro linux open source yang sangat
