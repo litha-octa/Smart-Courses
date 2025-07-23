@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="md:text-3xl text-lg font-bold">Smart-Courses</div>
       <div className="flex flex-row items-center space-x-4">
         <BellIcon size={32}/>
-        <UserCircle size={32} onClick={() => router.push("/profile")}/>
+        <UserCircle size={32} onClick={() => router.push("course/profile")}/>
     </div>
     </nav>
   );
