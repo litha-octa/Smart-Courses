@@ -10,12 +10,12 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   const formData = new FormData(e.currentTarget);
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString().trim();
+  localStorage.setItem("email", email || "");
 
   if (!email || !password) {
     alert("Email dan password wajib diisi!");
     return; 
   }
-
   router.push("/course/beranda");
 };
 
