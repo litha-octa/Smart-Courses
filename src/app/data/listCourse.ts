@@ -36,7 +36,79 @@ export const listCourse = [
     image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
     videolink:
       "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
-  }
+  },
+  {
+    id: 4,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
+  {
+    id: 5,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
+  {
+    id: 6,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
+  {
+    id: 7,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
+  {
+    id: 8,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
+  {
+    id: 9,
+    title: "Debian & Ubuntu Server Administration",
+    subtitle:
+      "Belajar konfigurasi Debian dan Ubuntu Server dengan kurikulum yang disusun sesuai kebutuhan industri!",
+    author: "Ahmad Rosid Komarudin",
+    rating: "4.5",
+    category: "Tech",
+    image: "https://linuxiac.b-cdn.net/wp-content/uploads/2021/05/debian-vs-ubuntu-for-server.png",
+    videolink:
+      "https://www.youtube.com/watch?v=nXXqs5-dYsA&list=PLSmk1Em-R3rqlsmL6WPw0DJmRBMc59SbK",
+  },
 ];
 
 
