@@ -37,7 +37,7 @@ export const listCourse = [
       "Web Server Nginx",
       "Web Server Apache",
     ],
-    targetaudience: [
+    targetAudience: [
       "Siswa SMK TKJ",
       "Mahasiswa IT",
       "Fresh Graduate",
