@@ -12,14 +12,22 @@ import { Star } from "lucide-react";
 import { Search } from "lucide-react";
 import { listCourse } from "../../data/listCourse";
 import { useRouter } from "next/navigation";
-// import { FaBell, FaShoppingCart, FaUser, FaUserFriends, FaStar, FaBook, FaSearch } from "lucide-react"
+import { useState } from "react";
 
 export default function Beranda() {
   const router = useRouter();
+  const [keyword, setKeyword] = useState<string>("");
+  const [filteredCourses, setFilteredCourses] = useState(listCourse); 
   const handleDetail = (data: any) => {
     router.push(`detail/${data.id}`);
     localStorage.setItem("detail", JSON.stringify(data));
   };
+  function searchByTitle(keyword: string) {
+  const term = keyword.toLowerCase();
+  setFilteredCourses(listCourse.filter(course =>
+    course.title.toLowerCase().includes(term)
+  ));
+}
 
   return (
     <>
@@ -111,6 +119,11 @@ export default function Beranda() {
           <div className="flex items-center bg-white rounded-full shadow-md px-6 lg:py-4 md:py-4 py-2 w-full max-w-3xl ">
             <input
               type="text"
+              value={keyword}
+              onChange={(e) => {
+                setKeyword(e.target.value);
+                searchByTitle(e.target.value);
+              }}
               placeholder="Cari kelas yang kamu sukai"
               className="flex-grow focus:outline-none text-lg text-black placeholder-gray-400"
             />
@@ -122,7 +135,7 @@ export default function Beranda() {
         <section className="bg-gray-100 py-16 px-4 text-center">
           <h3 className="text-2xl font-bold mb-8">Kelas Populer</h3>
           <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto">
-            {listCourse.map((kelas, index) => (
+            {filteredCourses.map((kelas, index) => (
               <div
                 key={index}
                 onClick={() => handleDetail(kelas)}
