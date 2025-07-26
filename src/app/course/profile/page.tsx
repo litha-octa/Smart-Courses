@@ -10,6 +10,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useDropzone } from "react-dropzone";
 import { X } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
+import { useRouter } from "next/navigation";
 
 const Profile = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -21,6 +22,7 @@ const Profile = () => {
   lastName: '',
   email: ''
 });
+const router = useRouter()
   useEffect(() => {
         const email = localStorage.getItem("email");
         setUser({
@@ -32,6 +34,11 @@ const Profile = () => {
       }, []);
 
 const [isSuccess, setIsSuccess] = useState(false);
+
+const handlerLogout = () =>{
+  localStorage.removeItem('email')
+  router.push('/login')
+}
 
 function ImageUploadPreview() {
 // Handle file selection
@@ -239,6 +246,11 @@ function ImageUploadPreview() {
         checked={isDark} 
         onCheckedChange={setIsDark} 
       />
+          </div>
+          <div className="flex justify-between items-center">
+            <Button className="w-full bg-red-600 text-white text-md"
+            onClick={handlerLogout}
+            >{lang ==='en' ? 'Log Out' : 'Keluar' }</Button>
           </div>
         </div>
       </div>
